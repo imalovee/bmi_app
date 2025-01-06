@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../shared/constants.dart';
 import '../../shared/custom_button.dart';
+import '../navigation/route_strings.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});
@@ -257,19 +258,25 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 ),
                 const SizedBox(height: 36,
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: AppColors.deepBlue
+                GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context,
+                        RouteStrings.resultScreen);
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: AppColors.deepBlue
+                    ),
+                    child: Text("Let's Go", style: poppinsTextStyle.copyWith(
+                        color: AppColors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400
+                    ),
+                      textAlign: TextAlign.center,),
                   ),
-                  child: Text("Let's Go", style: poppinsTextStyle.copyWith(
-                      color: AppColors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400
-                  ),
-                    textAlign: TextAlign.center,),
                 ),
               ],
             ),
