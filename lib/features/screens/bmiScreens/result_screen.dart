@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
 
-import '../../shared/app_colors.dart';
-import '../../shared/constants.dart';
+import '../../../shared/app_colors.dart';
+import '../../../shared/constants.dart';
 
 class ResultScreen extends StatefulWidget {
-  const ResultScreen({super.key});
+  const ResultScreen({super.key, required this.resultsParams});
+
+  final ResultsParams resultsParams;
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
@@ -44,7 +46,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   TweenAnimationBuilder(
                   tween: Tween<double>(
                       begin: 0.0,
-                      end: 100
+                      end: widget.resultsParams.bmiResult
                   ),
                     curve: Curves.easeInOut,
                     duration: const Duration(seconds: 2),
@@ -67,7 +69,7 @@ class _ResultScreenState extends State<ResultScreen> {
                           ),
                           Center(
                             child: Text(
-                          '',
+                          widget.resultsParams.bmiResult.toStringAsFixed(1),
                       style: poppinsTextStyle.copyWith(
                       fontWeight: FontWeight.w600,
                       fontSize: 100,
@@ -78,7 +80,7 @@ class _ResultScreenState extends State<ResultScreen> {
                       );
                       }),
                         const SizedBox(height: 16,),
-                        Text('resultsParams.bmiExplanations', style: poppinsTextStyle.copyWith(
+                        Text(widget.resultsParams.bmiInterpretation, style: poppinsTextStyle.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: 30,
                             color: AppColors.deepBlue
@@ -97,7 +99,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('resultsParams.bmiExplanations'
+                      Text(widget.resultsParams.bmiExplanations
                         , style: poppinsTextStyle.copyWith(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
@@ -116,3 +118,14 @@ class _ResultScreenState extends State<ResultScreen> {
 }
 
 
+class ResultsParams{
+  final double bmiResult;
+  final String bmiInterpretation;
+  final String bmiExplanations;
+
+  ResultsParams({
+    required this.bmiResult,
+    required this.bmiInterpretation,
+    required this.bmiExplanations,
+  });
+}
