@@ -6,12 +6,14 @@
   the user's weight in the calculator screen.
 - The result of the BMI is passed to the Result screen via Route navigation.
   _ The Result screen also displays explanations for each result category.
-
+ll
 ## Screenshots
  ![Calculator screen](assets/images/bmiData.jpeg)
  ![Result screen](assets/images/bmiResult.jpeg)
 
 ## ImageLink
+ ![image1](https://github.com/imalovee/bmi_app/blob/sub_branch/bmiData.jpeg)
+ ![image2](https://github.com/imalovee/bmi_app/blob/sub_branch/bmiResult.jpeg)
  Added a link to the images on google drive as a comment in the Maim.dart file.
 
 
