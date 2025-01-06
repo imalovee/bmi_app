@@ -12,7 +12,7 @@
  ![Result screen](assets/images/bmiResult.jpeg)
 
 ## ImageLink
- ![images](https://drive.google.com/drive/folders/1um8ku-GDE2gkWiyzZz0hjKgXX9Q6xD0H?usp=drive_link)
+ Added a link to the images on google drive as a comment in the Maim.dart file.
 
 
 
