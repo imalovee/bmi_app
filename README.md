@@ -12,8 +12,8 @@ ll
  ![Result screen](assets/images/bmiResult.jpeg)
 
 ## ImageLink
- ![image1](https://github.com/imalovee/bmi_app/blob/sub_branch/assets/images/bmiData.jpeg)
- ![image2](https://github.com/imalovee/bmi_app/blob/sub_branch/assets/images/bmiResult.jpeg)
+ ![image1](https://github.com/imalovee/bmi_app/blob/sub_branch/assets/images/bmiData.jpeg?raw=true)
+ ![image2](https://github.com/imalovee/bmi_app/blob/sub_branch/assets/images/bmiResult.jpeg?raw=true)
  Added a link to the images on google drive as a comment in the Maim.dart file.
 
 
