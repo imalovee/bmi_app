@@ -1,8 +1,9 @@
 import 'package:bmi_app/features/navigation/route_strings.dart';
-import 'package:bmi_app/features/screens/calculator_screen.dart';
-import 'package:bmi_app/features/screens/result_screen.dart';
+import 'package:bmi_app/features/screens/bmiScreens/calculator_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/bmiScreens/result_screen.dart';
 
 class Routes{
 
@@ -16,7 +17,7 @@ class Routes{
 
       case RouteStrings.resultScreen:
         return CupertinoPageRoute(builder: (_){
-          return const ResultScreen();
+          return ResultScreen(resultsParams: settings.arguments as ResultsParams,);
         });
 
       default:

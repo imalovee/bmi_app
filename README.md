@@ -1,6 +1,20 @@
 # bmi_app
 
-A BMI calculator app
+- This app is the first mini-project for the bootcamp class.
+- It comprises of two screens; the calculator screen and the result screen.
+- in Summary, The BMI calculator takes the user's height using the slider widget and multiplies it with
+  the user's weight in the calculator screen.
+- The result of the BMI is passed to the Result screen via Route navigation.
+  _ The Result screen also displays explanations for each result category.
+
+## Screenshots
+ ![Calculator screen](assets/images/bmiData.jpeg)
+ ![Result screen](assets/images/bmiResult.jpeg)
+
+## ImageLink
+ ![images](https://drive.google.com/drive/folders/1um8ku-GDE2gkWiyzZz0hjKgXX9Q6xD0H?usp=drive_link)
+
+
 
 ## Getting Started
 

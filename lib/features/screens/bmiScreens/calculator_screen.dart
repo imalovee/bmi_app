@@ -1,10 +1,12 @@
+import 'package:bmi_app/features/screens/bmiScreens/bmi_calculator_class.dart';
+import 'package:bmi_app/features/screens/bmiScreens/result_screen.dart';
 import 'package:bmi_app/shared/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../shared/constants.dart';
-import '../../shared/custom_button.dart';
-import '../navigation/route_strings.dart';
+import '../../../shared/constants.dart';
+import '../../../shared/custom_button.dart';
+import '../../navigation/route_strings.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});
@@ -260,8 +262,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 ),
                 GestureDetector(
                   onTap: (){
+                    BmiCalculator bmi = BmiCalculator(height: sliderValue, weight: _weight);
                     Navigator.pushNamed(context,
-                        RouteStrings.resultScreen);
+                        RouteStrings.resultScreen,
+                      arguments: ResultsParams(
+                          bmiResult: bmi.getResults(),
+                          bmiInterpretation: bmi.interpretation(),
+                          bmiExplanations: bmi.getExplanations()
+                      )
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width,
